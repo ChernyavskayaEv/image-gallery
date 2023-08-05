@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
+  <body class="body">
     <header class="header">
       <div class="wrapper">
         <div class="header__wrapper">
@@ -43,6 +43,9 @@
                 alt="icon_profile"
                 class="header__icon-img"
               />
+              <a href="#" class="header__nav-btn">
+                <span></span>
+              </a>
             </div>
           </div>
         </div>
@@ -71,30 +74,50 @@
               and a cozy coffee shop inside
             </div>
             <div class="about__photo-gallery">
-              <div class="about__photo-gallery_item">
+              <button class="arrow__button">
+                <img
+                  src="./img/svg/Carret_Left.svg"
+                  alt="arrow"
+                  class="arrow"
+                />
+              </button>
+              <div class="about__photo-gallery_item photo-gallery_1">
                 <img src="./img/photo-gallery-1.jpg" alt="photo-library" />
               </div>
-              <div class="about__photo-gallery_item">
+              <div class="about__photo-gallery_item photo-gallery_2">
                 <img src="./img/photo-gallery-2.jpg" alt="photo-library" />
               </div>
-              <div class="about__photo-gallery_item">
+              <div class="about__photo-gallery_item photo-gallery_3">
                 <img src="./img/photo-gallery-3.jpg" alt="photo-library" />
               </div>
-              <div class="about__photo-gallery_item invisible">
+              <div class="about__photo-gallery_item photo-gallery_4">
                 <img src="./img/photo-gallery-4.jpg" alt="photo-library" />
               </div>
-              <div class="about__photo-gallery_item invisible">
+              <div class="about__photo-gallery_item photo-gallery_5">
                 <img src="./img/photo-gallery-5.jpg" alt="photo-library" />
               </div>
+              <button class="arrow__button">
+                <img
+                  src="./img/svg/Carret_Right.svg"
+                  alt="arrow"
+                  class="arrow"
+                />
+              </button>
             </div>
             <div class="about__slider">
-              <div class="about__slider_item">
+              <div class="about__slider_item slider_1">
                 <div class="about__pagination_button active"></div>
               </div>
-              <div class="about__slider_item">
+              <div class="about__slider_item slider_2">
                 <div class="about__pagination_button"></div>
               </div>
-              <div class="about__slider_item">
+              <div class="about__slider_item slider_3">
+                <div class="about__pagination_button"></div>
+              </div>
+              <div class="about__slider_item slider_4">
+                <div class="about__pagination_button"></div>
+              </div>
+              <div class="about__slider_item slider_5">
                 <div class="about__pagination_button"></div>
               </div>
             </div>
@@ -244,7 +267,7 @@
                 />
               </div>
             </div>
-            <div class="favorites__books spring invisible">
+            <div class="favorites__books spring hidden">
               <div class="book">
                 <div class="book__wrapper">
                   <div class="book__info">
@@ -334,7 +357,7 @@
                 />
               </div>
             </div>
-            <div class="favorites__books summer invisible">
+            <div class="favorites__books summer hidden">
               <div class="book">
                 <div class="book__wrapper">
                   <div class="book__info">
@@ -429,7 +452,7 @@
                 />
               </div>
             </div>
-            <div class="favorites__books autumn invisible">
+            <div class="favorites__books autumn hidden">
               <div class="book">
                 <div class="book__wrapper">
                   <div class="book__info">
@@ -658,7 +681,12 @@
                   >
                 </div>
               </div>
-              <img id="map" src="./img/map.jpg" alt="Our location" />
+              <img
+                id="map"
+                src="./img/map.jpg"
+                alt="Our location"
+                class="map"
+              />
             </div>
           </div>
         </div>
@@ -776,5 +804,6 @@
       </div>
     </footer>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/score.js"></script>
   </body>
 </html>
