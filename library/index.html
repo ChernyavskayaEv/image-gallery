@@ -43,15 +43,270 @@
                 alt="icon_profile"
                 class="header__icon-img"
               />
-              <a href="#" class="header__nav-btn">
-                <span></span>
-              </a>
+              <div class="header__icon-name hidden">JS</div>
+            </div>
+            <a href="#" class="header__nav-btn">
+              <span></span>
+            </a>
+            <div class="profile__menu">
+              <div class="profile__menu-title">Profile</div>
+              <div class="profile__menu-card hidden">003F0D481</div>
+              <div class="profile__menu-underline"></div>
+              <div class="profile__menu-item log-in">Log In</div>
+              <div class="profile__menu-item register">Register</div>
+              <div class="profile__menu-item my-profile hidden">My profile</div>
+              <div class="profile__menu-item log-out hidden">Log Out</div>
             </div>
           </div>
         </div>
       </div>
     </header>
     <main class="main">
+      <div class="fixed-overlay fixed-overlay__modal opacity hidden">
+        <div class="modal">
+          <form action="#" class="modal__login opacity hidden">
+            <div class="modal__login_close-btn close-btn">
+              <img
+                src="./img/svg/close_btn.svg"
+                alt="icon_close"
+                class="icon_close"
+              />
+            </div>
+            <div class="modal__login_title">Login</div>
+
+            <label for="login-email" class="login-email-label"
+              >E-mail or readers card</label
+            >
+            <input
+              type="text"
+              id="login-email"
+              name="login-email-or-card"
+              placeholder="Fill in this field"
+              class="login-email login-req"
+            />
+            <label for="login-password" class="login-password-label"
+              >Password</label
+            >
+            <input
+              type="password"
+              id="login-password"
+              name="login-password"
+              placeholder="Password of 8 characters"
+              class="login-password login-req"
+            />
+            <button type="submit" class="modal__login-button submit">
+              Log In
+            </button>
+            <div class="modal__login_footer">
+              <div class="modal__login_question">Don’t have an account?</div>
+              <div class="modal__login_register">Register</div>
+            </div>
+          </form>
+          <form action="#" class="modal__register opacity hidden">
+            <div class="modal__register_close-btn close-btn">
+              <img
+                src="./img/svg/close_btn.svg"
+                alt="icon_close"
+                class="icon_close"
+              />
+            </div>
+            <div class="modal__register_title">Register</div>
+            <label for="register-first-name" class="register-first-name-label"
+              >First name</label
+            >
+            <input
+              type="text"
+              id="register-first-name"
+              name="register-first-name"
+              placeholder="Fill in this field"
+              class="register-first-name register-req"
+            />
+            <label for="register-last-name" class="register-last-name-label"
+              >Last name</label
+            >
+            <input
+              type="text"
+              id="register-last-name"
+              name="register-last-name"
+              placeholder="Fill in this field"
+              class="register-last-name register-req"
+            />
+            <label for="register-email" class="register-email-label"
+              >E-mail</label
+            >
+            <input
+              type="email"
+              id="register-email"
+              name="register-email"
+              placeholder="Enter your email"
+              class="register-email register-req"
+            />
+            <label for="register-password" class="register-password-label"
+              >Password</label
+            >
+            <input
+              type="password"
+              id="register-password"
+              name="register-password"
+              placeholder="Password of 8 characters"
+              class="register-password register-req"
+            />
+            <button type="submit" class="modal__register-button submit">
+              Sign Up
+            </button>
+            <div class="modal__register_footer">
+              <div class="modal__register_question">
+                Already have an account?
+              </div>
+              <div class="modal__login_register">Login</div>
+            </div>
+          </form>
+          <div class="modal_profile opacity hidden">
+            <div class="modal__profile_close-btn close-btn">
+              <img
+                src="./img/svg/close_btn.svg"
+                alt="icon_close"
+                class="icon_close"
+              />
+            </div>
+            <div class="modal_profile__left-side">
+              <div class="modal_profile__initials">JS</div>
+              <div class="modal_profile__fullname">John Doe</div>
+            </div>
+            <div class="modal_profile__right-side">
+              <div class="modal_profile__title">My profile</div>
+              <div class="modal_profile__main-data">
+                <div class="modal_profile__block-visits">
+                  <div class="modal_profile__blocks-title">Visits</div>
+                  <img
+                    src="./img/svg/Union.svg"
+                    alt="icon_profile"
+                    class="modal_profile__icon_profile"
+                  />
+                  <div class="modal_profile__score-visits">23</div>
+                </div>
+                <div class="modal_profile__block-bonuses">
+                  <div class="modal_profile__blocks-title">Bonuses</div>
+                  <img
+                    src="./img/svg/Star1.svg"
+                    alt="icon_star"
+                    class="modal_profile__icon_star"
+                  />
+                  <div class="modal_profile__score-bonuses">1240</div>
+                </div>
+                <div class="modal_profile__block-books">
+                  <div class="modal_profile__blocks-title">Books</div>
+                  <img
+                    src="./img/svg/book.svg"
+                    alt="icon_books"
+                    class="modal_profile__icon_books"
+                  />
+                  <div class="modal_profile__score-books">2</div>
+                </div>
+              </div>
+              <div class="modal_profile__rented-books">
+                <div>Rented books</div>
+                <ul class="list-books">
+                  <li>The Last Queen, Clive Irving</li>
+                  <li>Dominicana, Angie Cruz</li>
+                </ul>
+              </div>
+
+              <div class="modal_profile__card-data">
+                <div class="card-number-title">Card number</div>
+                <div class="card-number">F00234030</div>
+                <img
+                  src="./img/svg/icon_copy.svg"
+                  alt="icon_copy"
+                  class="icon_copy"
+                />
+              </div>
+            </div>
+          </div>
+          <form action="#" class="modal__buy-card opacity hidden">
+            <div class="modal__buy-card_close-btn close-btn">
+              <img
+                src="./img/svg/close_btn_white.svg"
+                alt="icon_close"
+                class="icon_close"
+              />
+            </div>
+            <div class="modal__buy-card_title">Buy a library card</div>
+            <div class="buy-card__main-data">
+              <div class="buy-card__left-side">
+                <label for="number-card" class="number-card-title"
+                  >Bank card number</label
+                >
+                <input
+                  type="number"
+                  id="number-card"
+                  name="number-card"
+                  class="number-card-data card-req"
+                />
+                <label for="expiration-code" class="expiration-code-title"
+                  >Expiration code</label
+                >
+                <div class="expiration-code-input">
+                  <input
+                    type="number"
+                    id="expiration-code"
+                    name="expiration-code-month"
+                    class="expiration-code-data-month card-req"
+                  />
+                  <input
+                    type="number"
+                    name="buy-card-year"
+                    class="expiration-code-data-year card-req"
+                  />
+                </div>
+
+                <label for="cvc-card" class="cvc-card-title">CVC</label>
+                <input
+                  type="number"
+                  id="cvc-card"
+                  name="cvc-card"
+                  class="cvc-card-data card-req"
+                />
+                <label for="cardholder" class="cardholder-title"
+                  >Cardholder name</label
+                >
+                <input
+                  type="text"
+                  id="cardholder"
+                  name="cardholder"
+                  class="cardholder-data card-req"
+                />
+                <label for="postal-code-card" class="postal-code-card-title"
+                  >Postal code</label
+                >
+                <input
+                  type="number"
+                  id="postal-code-card"
+                  name="postal-code"
+                  class="postal-code-card-data card-req"
+                />
+                <label for="location" class="location-title">City / Town</label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  class="location-data card-req"
+                />
+                <div class="block-buy-card">
+                  <button type="submit" class="buy-card-button">Buy</button>
+                  <div class="price-card">$ 25.00</div>
+                </div>
+              </div>
+              <div class="buy-card__right-side">
+                If you are live, work, attend school, or pay property taxes in
+                New York State, you can get a $25 digital library card right now
+                using this online form. Visitors to New York State can also use
+                this form to apply for a temporary card.
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
       <section class="welcome">
         <div class="wrapper">
           <div class="welcome__gradient">
@@ -73,52 +328,78 @@
               The Brooklyn Library is a free workspace, a large number of books
               and a cozy coffee shop inside
             </div>
-            <div class="about__photo-gallery">
-              <button class="arrow__button">
-                <img
-                  src="./img/svg/Carret_Left.svg"
-                  alt="arrow"
-                  class="arrow"
-                />
-              </button>
-              <div class="about__photo-gallery_item photo-gallery_1">
-                <img src="./img/photo-gallery-1.jpg" alt="photo-library" />
+            <div class="photo-gallery-slider">
+              <div class="about__photo-gallery">
+                <button disabled class="arrow__button left">
+                  <img
+                    src="./img/svg/Carret_Left.svg"
+                    alt="arrow"
+                    class="arrow"
+                  />
+                </button>
+
+                <div class="about__photo-gallery_wrapper">
+                  <div
+                    class="about__photo-gallery_items"
+                    style="transform: translateX(0px)"
+                  >
+                    <div class="about__photo-gallery_item">
+                      <img
+                        src="./img/photo-gallery-1.jpg"
+                        alt="photo-library"
+                      />
+                    </div>
+                    <div class="about__photo-gallery_item">
+                      <img
+                        src="./img/photo-gallery-2.jpg"
+                        alt="photo-library"
+                      />
+                    </div>
+                    <div class="about__photo-gallery_item">
+                      <img
+                        src="./img/photo-gallery-3.jpg"
+                        alt="photo-library"
+                      />
+                    </div>
+                    <div class="about__photo-gallery_item">
+                      <img
+                        src="./img/photo-gallery-4.jpg"
+                        alt="photo-library"
+                      />
+                    </div>
+                    <div class="about__photo-gallery_item">
+                      <img
+                        src="./img/photo-gallery-5.jpg"
+                        alt="photo-library"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <button class="arrow__button right">
+                  <img
+                    src="./img/svg/Carret_Right.svg"
+                    alt="arrow"
+                    class="arrow"
+                  />
+                </button>
               </div>
-              <div class="about__photo-gallery_item photo-gallery_2">
-                <img src="./img/photo-gallery-2.jpg" alt="photo-library" />
-              </div>
-              <div class="about__photo-gallery_item photo-gallery_3">
-                <img src="./img/photo-gallery-3.jpg" alt="photo-library" />
-              </div>
-              <div class="about__photo-gallery_item photo-gallery_4">
-                <img src="./img/photo-gallery-4.jpg" alt="photo-library" />
-              </div>
-              <div class="about__photo-gallery_item photo-gallery_5">
-                <img src="./img/photo-gallery-5.jpg" alt="photo-library" />
-              </div>
-              <button class="arrow__button">
-                <img
-                  src="./img/svg/Carret_Right.svg"
-                  alt="arrow"
-                  class="arrow"
-                />
-              </button>
-            </div>
-            <div class="about__slider">
-              <div class="about__slider_item slider_1">
-                <div class="about__pagination_button active"></div>
-              </div>
-              <div class="about__slider_item slider_2">
-                <div class="about__pagination_button"></div>
-              </div>
-              <div class="about__slider_item slider_3">
-                <div class="about__pagination_button"></div>
-              </div>
-              <div class="about__slider_item slider_4">
-                <div class="about__pagination_button"></div>
-              </div>
-              <div class="about__slider_item slider_5">
-                <div class="about__pagination_button"></div>
+              <div class="about__slider">
+                <div class="about__slider_item">
+                  <div class="about__pagination_button active"></div>
+                </div>
+                <div class="about__slider_item">
+                  <div class="about__pagination_button"></div>
+                </div>
+                <div class="about__slider_item">
+                  <div class="about__pagination_button"></div>
+                </div>
+                <div class="about__slider_item">
+                  <div class="about__pagination_button"></div>
+                </div>
+                <div class="about__slider_item">
+                  <div class="about__pagination_button"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -259,7 +540,8 @@
                     </div>
                   </div>
                 </div>
-                <button disabled class="book__button">Own</button>
+                <button class="book__button">Buy</button>
+                <!-- <button disabled class="book__button">Own</button> -->
                 <img
                   src="./img/The_Last_Queen.jpg"
                   alt="The Last Queen By Clive Irving"
@@ -267,7 +549,7 @@
                 />
               </div>
             </div>
-            <div class="favorites__books spring hidden">
+            <div class="favorites__books spring hidden opacity">
               <div class="book">
                 <div class="book__wrapper">
                   <div class="book__info">
@@ -349,7 +631,8 @@
                     </div>
                   </div>
                 </div>
-                <button disabled class="book__button">Own</button>
+                <!-- <button disabled class="book__button">Own</button> -->
+                <button class="book__button">Buy</button>
                 <img
                   src="./img/Dominicana.jpg"
                   alt="Dominicana By Angie Cruz"
@@ -357,7 +640,7 @@
                 />
               </div>
             </div>
-            <div class="favorites__books summer hidden">
+            <div class="favorites__books summer hidden opacity">
               <div class="book">
                 <div class="book__wrapper">
                   <div class="book__info">
@@ -452,7 +735,7 @@
                 />
               </div>
             </div>
-            <div class="favorites__books autumn hidden">
+            <div class="favorites__books autumn hidden opacity">
               <div class="book">
                 <div class="book__wrapper">
                   <div class="book__info">
@@ -701,27 +984,61 @@
                 <div class="librarycard__find-card-title">
                   Find your Library card
                 </div>
-                <form action="#" class="form">
-                  <div class="form__input-wrapper">
-                    <div class="form__title">Brooklyn Public Library</div>
+                <div class="librarycard__your-card-title hidden">
+                  Your Library card
+                </div>
+                <form action="#" class="form-library-card">
+                  <div class="form-library-card__input-wrapper">
+                    <div class="form-library-card__title">
+                      Brooklyn Public Library
+                    </div>
                     <input
                       type="text"
-                      pattern="[a-zA-Z0-9- ]+"
                       placeholder="Reader's name"
                       name="name"
-                      class="form__input"
+                      class="form-library-card__input"
+                      value=""
                     />
                     <input
                       type="text"
-                      pattern="[a-zA-Z0-9-]+"
                       placeholder="Card number"
                       name="card-number"
-                      class="form__input"
+                      class="form-library-card__input"
+                      value=""
                     />
                   </div>
-                  <button type="submit" class="form__button">
+                  <button type="submit" class="form-library-card__button">
                     Check the card
                   </button>
+                  <div class="profile__data hidden">
+                    <div class="profile__block-visits">
+                      <div class="profile__blocks-title">Visits</div>
+                      <img
+                        src="./img/svg/Union.svg"
+                        alt="icon_profile"
+                        class="icon_profile"
+                      />
+                      <div class="profile__score-visits">23</div>
+                    </div>
+                    <div class="profile__block-bonuses">
+                      <div class="profile__blocks-title">Bonuses</div>
+                      <img
+                        src="./img/svg/Star1.svg"
+                        alt="icon_star"
+                        class="icon_star"
+                      />
+                      <div class="profile__score-bonuses">1240</div>
+                    </div>
+                    <div class="profile__block-books">
+                      <div class="profile__blocks-title">Books</div>
+                      <img
+                        src="./img/svg/book.svg"
+                        alt="icon_books"
+                        class="icon_books"
+                      />
+                      <div class="profile__score-books">2</div>
+                    </div>
+                  </div>
                 </form>
               </div>
               <div class="librarycard__get-card">
@@ -731,8 +1048,23 @@
                   account or you can register a new account
                 </div>
                 <div class="librarycard__get-card-button-block">
-                  <button class="librarycard__get-card-button">Sign Up</button>
-                  <button class="librarycard__get-card-button">Log in</button>
+                  <button class="librarycard__signup-button">Sign Up</button>
+                  <button class="librarycard__login-button">Log in</button>
+                </div>
+              </div>
+              <div class="librarycard__visit-profile hidden">
+                <div class="librarycard__visit-profile-title">
+                  Visit your profile
+                </div>
+                <div class="librarycard__visit-profile-description">
+                  With a digital library card you get free access to the
+                  Library’s wide array of digital resources including e-books,
+                  databases, educational resources, and more.
+                </div>
+                <div class="librarycard__visit-profile-button-block">
+                  <button class="librarycard__visit-profile-button">
+                    Profile
+                  </button>
                 </div>
               </div>
             </div>
@@ -803,6 +1135,7 @@
         </div>
       </div>
     </footer>
+
     <script src="./scripts/index.js"></script>
     <script src="./scripts/score.js"></script>
   </body>
