@@ -1,25 +1,60 @@
+const wholescreen = document.querySelector('.wholescreen');
 const playerScreensaver = document.querySelector('.player__screensaver');
 const audioPlayer = document.querySelector('.player__control-block');
-const previousSong = audioPlayer.querySelector('.previous-song');
+const songArtist = audioPlayer.querySelector('.song-artist');
+const songTitle = audioPlayer.querySelector('.song-title');
 const playPause = audioPlayer.querySelector('.play-pause');
-const nextSong = audioPlayer.querySelector('.next-song');
 const timeline = audioPlayer.querySelector('#timeline');
 const currentTime = audioPlayer.querySelector('.current');
 const lengthSong = audioPlayer.querySelector('.length');
 const volume = audioPlayer.querySelector('.volume');
 const volumeSlider = audioPlayer.querySelector('#volume-slider');
 
+const trackList = [
+  [
+    'Beyonce',
+    "Don't Hurt Yourself",
+    './audio/beyonce.mp3',
+    './img/lemonade.png',
+  ],
+  [
+    'Dua Lipa',
+    "Don't Start Now",
+    './audio/dontstartnow.mp3',
+    './img/dontstartnow.png',
+  ],
+  ['Miley Cyrus', 'Flowers', './audio/flowers.mp3', './img/flowers.png'],
+  [
+    'Billie Eilish',
+    'Bellyache',
+    './audio/bellyache.mp3',
+    './img/bellyache.png',
+  ],
+];
+
+let newVolume = 0.5;
+
 const audio = new Audio();
-audio.src = './audio/beyonce.mp3';
-console.log(audio);
+
+let numberOfTrack = 0;
+fillData(trackList[numberOfTrack]);
+
+function fillData([artist, track, audioTrack, imgTrack]) {
+  audio.src = audioTrack;
+  songArtist.textContent = artist;
+  songTitle.textContent = track;
+  playerScreensaver.src = imgTrack;
+  playerScreensaver.alt = `${artist}: ${track}`;
+  wholescreen.style.backgroundImage = `url(${imgTrack})`;
+}
 
 audio.addEventListener(
   'loadeddata',
   () => {
     lengthSong.textContent = getTimeCodeFromNum(audio.duration);
-    audio.volume = 0.5;
     playPause.src = './img/play.png';
-    volumeSlider.value = 50;
+    audio.volume = newVolume;
+    volumeSlider.value = newVolume * 100;
     timeline.value = 0;
   },
   false
@@ -47,7 +82,7 @@ audioPlayer.addEventListener('click', (event) => {
   }
   if (event.target.classList.contains('volume-slider')) {
     const sliderWidth = window.getComputedStyle(volumeSlider).width;
-    let newVolume = event.offsetX / parseInt(sliderWidth);
+    newVolume = event.offsetX / parseInt(sliderWidth);
     if (newVolume > 1) {
       newVolume = 1;
       volume.src = './img/volume.png';
@@ -70,6 +105,18 @@ audioPlayer.addEventListener('click', (event) => {
       playerScreensaver.style.transform = 'scale(1)';
       audio.pause();
     }
+  }
+  if (event.target.classList.contains('previous-song')) {
+    numberOfTrack === 0
+      ? (numberOfTrack = trackList.length - 1)
+      : numberOfTrack--;
+    fillData(trackList[numberOfTrack]);
+  }
+  if (event.target.classList.contains('next-song')) {
+    numberOfTrack === trackList.length - 1
+      ? (numberOfTrack = 0)
+      : numberOfTrack++;
+    fillData(trackList[numberOfTrack]);
   }
 });
 

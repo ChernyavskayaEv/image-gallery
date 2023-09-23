@@ -148,6 +148,7 @@ main {
 .player__wrapper {
   height: max-content;
   max-width: 80%;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -159,6 +160,7 @@ main {
 
 .sceensaver_wrapper {
   overflow: hidden;
+  border-radius: 10px 10px 0 0;
 }
 
 .player__wrapper > .player__screensaver {
@@ -169,8 +171,10 @@ main {
 
 .player__screensaver {
   width: 100%;
+  height: 320px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   transition: all 1s ease-in-out;
 }
 
@@ -182,7 +186,6 @@ main {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../img/lemonade.png);
   background-position: center;
 }
 
@@ -257,16 +260,16 @@ main {
   border-radius: 50px;
   cursor: pointer;
   outline: none;
+  position: relative;
 }
 
 input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
   width: 10px;
   height: 10px;
   background-color: #fff;
   box-shadow: 0px 0px 5px #fff;
   border-radius: 50%;
-  position: absolute;
-  left: 0;
 }
 
 input[type='range']::-moz-range-thumb {
@@ -363,7 +366,6 @@ input[type='range']::-moz-range-thumb {
   width: 0px;
   height: 0px;
   border-radius: 30px;
-  position: absolute;
   left: 50%;
   transition: all 1s ease-in-out;
 }
